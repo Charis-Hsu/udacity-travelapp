@@ -1,4 +1,3 @@
-
 function isValidCityName(cityName) {
   let urlRGEX = /^[a-zA-Z\s]{0,255}$/;
   if (urlRGEX.test(cityName)) {
@@ -23,4 +22,4 @@ function invalidCityName(textbox) {
     return true;
 }
 
-export{invalidCityName};
+export{invalidCityName, isValidCityName};

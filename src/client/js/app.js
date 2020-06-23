@@ -37,13 +37,10 @@ export function addTrip(e) {
     })
     .then((msg) => {
       const postDataURL = `${process.env.BACKEND_URL}/add`;
-      console.log(postDataURL)
+      console.log(msg);
       const userData = postData(postDataURL,
       { fromCityName, toCityName, depDate,
-        weather: msg.weatherData.data[0].temp,
-        hightemp: msg.weatherData.data[0].max_temp,
-        mintemp: msg.weatherData.data[0].min_temp,
-        weatherDescription: msg.weatherData.data[0].weather.description,
+        weather: `1st Day: ${msg.weatherData[0]}&#176 C, 2nd Day:${msg.weatherData[1]}&#176 C, 3rd Day: ${msg.weatherData[2]}&#176 C `,
         image: msg.image });
       return userData;
     })

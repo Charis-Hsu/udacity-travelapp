@@ -5,10 +5,7 @@ async function updateUI (userData){
   try {
     document.querySelector("#city").innerHTML = `Destination: ${userData.arrCity}`;
     document.querySelector("#date").innerHTML = `Departure Date: ${userData.depDate}`;
-    document.querySelector("#weatherDescription").innerHTML = `Weather Description: ${userData.weatherDescription}`;
-    document.querySelector("#temp").innerHTML = `Average Temperature: ${userData.weather} &#176; C`;
-    document.querySelector("#maxtemp").innerHTML = `Max Temperature: ${userData.hightemp} &#176; C`;
-    document.querySelector("#mintemp").innerHTML = `Min Temperature: ${userData.mintemp} &#176; C`;
+    document.querySelector("#temp").innerHTML = `Temperature: ${userData.weather}`;
     document.querySelector("#fromPixabay").setAttribute('src', userData.image);
     countDownTimer(userData.depDate);
   }
@@ -37,8 +34,7 @@ function countDownTimer(endDate) {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="demo"
-    document.querySelector("#countDownTimer").innerHTML = countDownTimer + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+    document.querySelector("#countDownTimer").innerHTML = ` Count Down Timer: ${countDownTimer}d ${hours}h ${minutes}m ${seconds}s `;
 
     // If the count down is over, write some text
     if (distance < 0) {

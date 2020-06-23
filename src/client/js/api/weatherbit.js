@@ -8,8 +8,13 @@ async function getWeather(cityLat, cityLon){
   const res = await fetch(completeURL);
 
   try {
+    let result = [];
+
     const weatherData = await res.json();
-    return weatherData;
+    result[0]= weatherData.data[0].temp;
+    result[1]= weatherData.data[1].temp;
+    result[2]= weatherData.data[2].temp;
+    return result;
   } catch (error) {
     console.log("getWeather error", error);
   }

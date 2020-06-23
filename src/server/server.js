@@ -25,9 +25,6 @@ app.post('/add', function(req, res) {
   data.arrCity = req.body.arrCity;
   data.depDate = req.body.depDate;
   data.weather = req.body.weather;
-  data.mintemp = req.body.mintemp;
-  data.hightemp = req.body.hightemp;
-  data.weatherDescription = req.body.weatherDescription;
   data.image = req.body.image;
   res.send(data);
 })

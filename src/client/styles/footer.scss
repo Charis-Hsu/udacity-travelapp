@@ -1,0 +1,12 @@
+footer {
+  background: linear-gradient(to left right, $linear-color-three, $linear-color-four);
+  // position: fixed;
+  display: flex;
+  height: 10px;
+  width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+  justify-content: center;
+  font-family: serif;
+
+
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel App</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header class="header">
+      <h2>Travel</h2>
+        <p class="navbar__list about__map map__link"><a href="#planner">Trip Planner</a></p>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Section Planner -->
+
+    <section id="planner" class="section section__planner">
+      <div class="container planner__form">
+        <form class="form__content" id="form">
+          <h2 class="form__heading">Trip Planner</h2>
+          <input type="text" class="form__input input__from" name="from" placeholder="From..."
+            autocomplete="off" oninvalid="return Client.invalidCityName(this);" oninput="return Client.invalidCityName(this);" required><br>
+          <input type="text" class="form__input input__to" name="to" placeholder="To..." autocomplete="off"
+            required><br>
+          <label class="date__label" for="date">Depart</label><br>
+          <input type="date" class="form__input input__date" name="date" required>
+          <input type="submit" class="input__submit" name="submit" value="Submit" onclick="return Client.addTrip(event);" onsubmit="return Client.addTrip(event)>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- Section Result -->
+
+    <section id="result" class="section section__result invisible">
+      <div class="container results">
+        <div class="result__image">
+          <img src="./beach.png" alt="destination image" id="fromPixabay">
+        </div>
+        <div class="result__content">
+
+          <i class="city__icon icon__result "></i>
+          <h2 class="city__name text__result"><span id="city"></span></h2>
+          <i class="date__icon icon__result"></i>
+          <h2 class="date__name text__result"><span id="date"></span></h2>
+
+          <i class="countDownTimer__icon icon__result"></i>
+          <h2 class="dacountDownTimer__name text__result"><span id="countDownTimer"></span></h2>
+
+          <i class="weather__icon icon__result"></i>
+          <h2 class="weather__name text__result">
+            <span id="temp"></span><br>
+            <span id="maxtemp"></span><br>
+            <span id="mintemp"></span><br>
+            <span id="weatherDescription"></span></h2>
+            <a class="button button__save" id="save" href="#">Save Trip</a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+
+  <footer>
+    Welcome to Travel App
+  </footer>
+
+  <!-- Service Workers -->
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                .then(registration =>{
+                });
+            });
+    }
+  </script>
+</body>
+
+</html>

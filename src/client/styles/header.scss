@@ -1,0 +1,22 @@
+header {
+  background: linear-gradient(to bottom right, $linear-color-three, $linear-color-four);
+  // position: fixed;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+
+  h2{
+    font-family: "Balsamiq Sans";
+    text-align:left;
+    font-size: 50px;
+    padding: 0.5rem;
+  }
+
+  .navbar__list{
+    font-family: "Balsamiq Sans";
+    text-align:center;
+    font-size: 20px;
+    padding: 3rem;
+  }
+}

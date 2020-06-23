@@ -4,11 +4,9 @@ const bodyParser = require('body-parser');
 const app = express();
 
 
-// BodyParser config
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Cors for cross origin allowance
 const cors = require('cors');
 app.use(cors());
 app.use(express.static('dist'));
@@ -21,6 +19,7 @@ app.get('/', function (req, res) {
 // Post Route
 app.post('/add', function(req, res) {
   let data = {};
+  data.countryCurrency = req.body.countryCurrency;
   data.depCity = req.body.depCity;
   data.arrCity = req.body.arrCity;
   data.depDate = req.body.depDate;
@@ -30,7 +29,6 @@ app.post('/add', function(req, res) {
 })
 
 // Setup Server
-
 const port = 8000;
 const server = app.listen(port, listening);
 

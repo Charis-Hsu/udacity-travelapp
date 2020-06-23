@@ -11,11 +11,9 @@ async function postData(url = '', data = {}){
       arrCity: data.toCityName,
       depDate: data.depDate,
       weather: data.weather,
-      weather: data.weather,
-      hightemp: data.hightemp,
-      mintemp: data.mintemp,
-      weatherDescription: data.weatherDescription,
-      image: data.image
+      image: data.image,
+      countryCurrency: data.currency,
+      test: "test"
     })
   })
   try {

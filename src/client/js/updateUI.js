@@ -1,9 +1,8 @@
-// import {countDownTimer} from "./countDownTimer.js";
-
 async function updateUI (userData){
   const result = document.querySelector("#result");
   try {
     document.querySelector("#city").innerHTML = `Destination: ${userData.arrCity}`;
+    document.querySelector("#currency").innerHTML = `Currency: ${userData.countryCurrency}`;
     document.querySelector("#date").innerHTML = `Departure Date: ${userData.depDate}`;
     document.querySelector("#temp").innerHTML = `Temperature: ${userData.weather}`;
     document.querySelector("#fromPixabay").setAttribute('src', userData.image);

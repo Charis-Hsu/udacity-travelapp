@@ -7,14 +7,14 @@ header {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
 
   h2{
-    font-family: "Balsamiq Sans";
+    font-family: $font-headings;
     text-align:left;
     font-size: 50px;
     padding: 0.5rem;
   }
 
-  .navbar__list{
-    font-family: "Balsamiq Sans";
+  .map__link{
+    font-family:$font-headings;
     text-align:center;
     font-size: 20px;
     padding: 3rem;

@@ -3,12 +3,12 @@
 ### Project
 This project requires you to build out a travel app that, at a minimum, obtains a desired trip location & date from the user, and displays weather and an image of the location using information obtained from external APIs.
 
-## API(s) Used
-
-* [Geonames API](http://www.geonames.org/export/web-services.html) - Geographical database from which the location data is pulled
-* [Weatherbit API](https://www.weatherbit.io/) - Weather API for current and future weather data
-* [Pixabay API](https://pixabay.com/api/docs/) - RESTful interface for searching and retrieving free images
-
+## Features
+* Integrate the [REST Countries API](https://restcountries.eu/) for the country to be visited.
+* Use .env file to keep API safety.
+* Use countDown Timer to calculate departure days.
+* Pull the forecast for multiple days.
+* Print their trip and export to PDF.
 
 ## Getting Started
 

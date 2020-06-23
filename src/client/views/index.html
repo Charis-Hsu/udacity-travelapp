@@ -21,17 +21,17 @@
 
     <!-- Section Planner -->
 
-    <section id="planner" class="section section__planner">
-      <div class="container planner__form">
-        <form class="form__content" id="form">
-          <h2 class="form__heading">Trip Planner</h2>
-          <input type="text" class="form__input input__from" name="from" placeholder="From..."
+    <section id="planner" class="section">
+      <div class="container">
+        <form id="form">
+          <h2>Trip Planner</h2>
+          <input type="text" class="form__input" name="from" placeholder="From..."
             autocomplete="off" oninvalid="return Client.invalidCityName(this);" oninput="return Client.invalidCityName(this);" required><br>
-          <input type="text" class="form__input input__to" name="to" placeholder="To..." autocomplete="off"
+          <input type="text" class="form__input" name="to" placeholder="To..." autocomplete="off"
             required><br>
-          <label class="date__label" for="date">Depart</label><br>
-          <input type="date" class="form__input input__date" name="date" required>
-          <input type="submit" class="input__submit" name="submit" value="Submit" onclick="return Client.addTrip(event);" onsubmit="return Client.addTrip(event)>
+          <label for="date">Depart</label><br>
+          <input type="date" class="form__input" name="date" required>
+          <input type="submit" name="submit" value="Submit" onclick="return Client.addTrip(event);" onsubmit="return Client.addTrip(event)>
         </form>
       </div>
     </section>
@@ -39,28 +39,18 @@
 
     <!-- Section Result -->
 
-    <section id="result" class="section section__result invisible">
-      <div class="container results">
+    <section id="result" class="section invisible">
+      <div class="container">
         <div class="result__image">
           <img src="./beach.png" alt="destination image" id="fromPixabay">
         </div>
         <div class="result__content">
-
-          <i class="city__icon icon__result "></i>
-          <h2 class="city__name text__result"><span id="city"></span></h2>
-          <i class="date__icon icon__result"></i>
-          <h2 class="date__name text__result"><span id="date"></span></h2>
-
-          <i class="countDownTimer__icon icon__result"></i>
-          <h2 class="dacountDownTimer__name text__result"><span id="countDownTimer"></span></h2>
-
-          <i class="weather__icon icon__result"></i>
-          <h2 class="weather__name text__result">
+          <h2 class="city__name"><span id="city"></span></h2>
+          <h2 class="date__name"><span id="date"></span></h2>
+          <h2 class="dacountDownTimer__name"><span id="countDownTimer"></span></h2>
+          <h2 class="weather__name">
             <span id="temp"></span><br>
-            <span id="maxtemp"></span><br>
-            <span id="mintemp"></span><br>
-            <span id="weatherDescription"></span></h2>
-            <a class="button button__save" id="save" href="#">Save Trip</a>
+            <a class="button" id="save" href="#">Save Trip</a>
 
         </div>
       </div>
@@ -70,7 +60,7 @@
   <!-- Footer -->
 
   <footer>
-    Welcome to Travel App
+    <p><div>Icons erstellt von <a href="https://www.flaticon.com/de/autoren/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a></div>
   </footer>
 
   <!-- Service Workers -->

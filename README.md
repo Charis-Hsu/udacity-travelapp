@@ -14,7 +14,9 @@ This project requires you to build out a travel app that, at a minimum, obtains 
 
 1. Download or clone the project
 
-2. Install dependencies
+2. Set `env` by looking `env.sample` and
+
+Install dependencies
 ```
 npm install --save-dev
 ```
